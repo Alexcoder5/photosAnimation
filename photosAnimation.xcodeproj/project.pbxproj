@@ -6,17 +6,30 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		FAF490BF2F1227F700F85A48 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAF490BB2F1227F700F85A48 /* Assets.xcassets */; };
+		FAF490C02F1227F700F85A48 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF490BC2F1227F700F85A48 /* ContentView.swift */; };
+		FAF490C12F1227F700F85A48 /* photosAnimationApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF490BD2F1227F700F85A48 /* photosAnimationApp.swift */; };
+		FAF490C52F12282100F85A48 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF490C42F12282100F85A48 /* Item.swift */; };
+		FAF490C72F1230EE00F85A48 /* UICoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF490C62F1230EE00F85A48 /* UICoordinator.swift */; };
+		FAF490C92F1231F300F85A48 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF490C82F1231F300F85A48 /* Home.swift */; };
+		FAF490CB2F12395500F85A48 /* Detail.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF490CA2F12394F00F85A48 /* Detail.swift */; };
+		FAF490CD2F123C6400F85A48 /* HeroLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF490CC2F123C6400F85A48 /* HeroLayer.swift */; };
+		FAF490CF2F123C9D00F85A48 /* HeroKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF490CE2F123C9700F85A48 /* HeroKey.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		FAF490AD2F12279000F85A48 /* photosAnimation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = photosAnimation.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAF490BB2F1227F700F85A48 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FAF490BC2F1227F700F85A48 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		FAF490BD2F1227F700F85A48 /* photosAnimationApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = photosAnimationApp.swift; sourceTree = "<group>"; };
+		FAF490C42F12282100F85A48 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		FAF490C62F1230EE00F85A48 /* UICoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICoordinator.swift; sourceTree = "<group>"; };
+		FAF490C82F1231F300F85A48 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		FAF490CA2F12394F00F85A48 /* Detail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Detail.swift; sourceTree = "<group>"; };
+		FAF490CC2F123C6400F85A48 /* HeroLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroLayer.swift; sourceTree = "<group>"; };
+		FAF490CE2F123C9700F85A48 /* HeroKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroKey.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		FAF490AF2F12279000F85A48 /* photosAnimation */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = photosAnimation;
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		FAF490AA2F12279000F85A48 /* Frameworks */ = {
@@ -32,7 +45,7 @@
 		FAF490A42F12279000F85A48 = {
 			isa = PBXGroup;
 			children = (
-				FAF490AF2F12279000F85A48 /* photosAnimation */,
+				FAF490BE2F1227F700F85A48 /* photosAnimation */,
 				FAF490AE2F12279000F85A48 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -43,6 +56,38 @@
 				FAF490AD2F12279000F85A48 /* photosAnimation.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		FAF490BE2F1227F700F85A48 /* photosAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				FAF490C32F12281400F85A48 /* Model */,
+				FAF490C22F12280400F85A48 /* View */,
+				FAF490BB2F1227F700F85A48 /* Assets.xcassets */,
+				FAF490BC2F1227F700F85A48 /* ContentView.swift */,
+				FAF490BD2F1227F700F85A48 /* photosAnimationApp.swift */,
+			);
+			path = photosAnimation;
+			sourceTree = "<group>";
+		};
+		FAF490C22F12280400F85A48 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FAF490CA2F12394F00F85A48 /* Detail.swift */,
+				FAF490C82F1231F300F85A48 /* Home.swift */,
+				FAF490CC2F123C6400F85A48 /* HeroLayer.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FAF490C32F12281400F85A48 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FAF490CE2F123C9700F85A48 /* HeroKey.swift */,
+				FAF490C42F12282100F85A48 /* Item.swift */,
+				FAF490C62F1230EE00F85A48 /* UICoordinator.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -59,9 +104,6 @@
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				FAF490AF2F12279000F85A48 /* photosAnimation */,
 			);
 			name = photosAnimation;
 			packageProductDependencies = (
@@ -109,6 +151,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAF490BF2F1227F700F85A48 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,6 +162,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAF490C72F1230EE00F85A48 /* UICoordinator.swift in Sources */,
+				FAF490C02F1227F700F85A48 /* ContentView.swift in Sources */,
+				FAF490CD2F123C6400F85A48 /* HeroLayer.swift in Sources */,
+				FAF490CB2F12395500F85A48 /* Detail.swift in Sources */,
+				FAF490C92F1231F300F85A48 /* Home.swift in Sources */,
+				FAF490C52F12282100F85A48 /* Item.swift in Sources */,
+				FAF490C12F1227F700F85A48 /* photosAnimationApp.swift in Sources */,
+				FAF490CF2F123C9D00F85A48 /* HeroKey.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

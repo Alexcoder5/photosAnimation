@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA2368962F16A964005A9B18 /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2368952F16A95D005A9B18 /* View+Extensions.swift */; };
 		FAF490BF2F1227F700F85A48 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAF490BB2F1227F700F85A48 /* Assets.xcassets */; };
 		FAF490C02F1227F700F85A48 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF490BC2F1227F700F85A48 /* ContentView.swift */; };
 		FAF490C12F1227F700F85A48 /* photosAnimationApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF490BD2F1227F700F85A48 /* photosAnimationApp.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FA2368952F16A95D005A9B18 /* View+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extensions.swift"; sourceTree = "<group>"; };
 		FAF490AD2F12279000F85A48 /* photosAnimation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = photosAnimation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAF490BB2F1227F700F85A48 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FAF490BC2F1227F700F85A48 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -42,6 +44,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FA2368942F16A952005A9B18 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				FA2368952F16A95D005A9B18 /* View+Extensions.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
 		FAF490A42F12279000F85A48 = {
 			isa = PBXGroup;
 			children = (
@@ -73,6 +83,7 @@
 		FAF490C22F12280400F85A48 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				FA2368942F16A952005A9B18 /* Helper */,
 				FAF490CA2F12394F00F85A48 /* Detail.swift */,
 				FAF490C82F1231F300F85A48 /* Home.swift */,
 				FAF490CC2F123C6400F85A48 /* HeroLayer.swift */,
@@ -163,6 +174,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FAF490C72F1230EE00F85A48 /* UICoordinator.swift in Sources */,
+				FA2368962F16A964005A9B18 /* View+Extensions.swift in Sources */,
 				FAF490C02F1227F700F85A48 /* ContentView.swift in Sources */,
 				FAF490CD2F123C6400F85A48 /* HeroLayer.swift in Sources */,
 				FAF490CB2F12395500F85A48 /* Detail.swift in Sources */,
@@ -307,6 +319,7 @@
 				DEVELOPMENT_TEAM = JDNZ7K4MD4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "The app need photos";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -339,6 +352,7 @@
 				DEVELOPMENT_TEAM = JDNZ7K4MD4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "The app need photos";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

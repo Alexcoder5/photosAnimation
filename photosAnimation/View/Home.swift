@@ -10,18 +10,49 @@ import SwiftUI
 struct Home: View {
     @Environment(UICoordinator.self) private var coordinator
     var body: some View {
-        ScrollView(.vertical){
-            LazyVGrid(columns: Array(repeating: GridItem(spacing: 3), count: 3), spacing: 3) {
-                ForEach(coordinator.items) { item in
-                    GridImageView(item)
-                        .onTapGesture {
-                            coordinator.selectedItem = item 
+        @Bindable var bindableCoordinator =  coordinator
+        ScrollViewReader { reader in
+            ScrollView(.vertical) {
+                LazyVStack(alignment: .leading, spacing: 0) {
+                    Text("Resents")
+                        .font(.largeTitle.bold())
+                        .padding(.top, 20)
+                        .padding(.horizontal, 15)
+                    
+                    LazyVGrid(columns: Array(repeating: GridItem(spacing: 3), count: 3), spacing: 3){
+                        ForEach($bindableCoordinator.items) { $item in
+                            GridImageView(item)
+                                .id(item.id)
+                                .didFrameChange { frame, bounds in
+                                    let minY = frame.minY
+                                    let maxY = frame.maxY
+                                    let height = bounds.height
+                                    
+                                    if maxY < 0 || minY > height {
+                                        item.appeared = false
+                                    } else {
+                                        item.appeared = true
+                                    }
+                                }
+                                .onDisappear {
+                                    item.appeared = false
+                                }
+                                .onTapGesture {
+                                    coordinator.selectedItem = item
+                                }
                         }
+                    }
+                }
+                .padding(.vertical, 15)
+            }
+            .onChange(of: coordinator.selectedItem) { oldValue, newValue in
+                if let item = coordinator.items.first(where: { $0.id == newValue?.id }),
+                   !item.appeared {
+                    reader.scrollTo(item.id, anchor: .bottom)
                 }
             }
-            .padding(.vertical, 15)
         }
-        .navigationTitle("Recents")
+        .toolbar(.hidden, for: .navigationBar)
     }
     
     
